@@ -12,7 +12,7 @@ int main(int argc, char**argv){
 	char *buf = (char*)  malloc(sizeof(char)*(MaxLen+1));
 	
 	fd_in = open(*(argv+1),O_RDONLY);
-	fd_out = open(*(argv+2),O_WRONLY,O_TRUNC|O_CREAT,00600);
+	fd_out = open(*(argv+2),O_WRONLY|O_TRUNC|O_CREAT,00600);
 	
 	if(fd_in == -1){
 		printf("Open input file error!!!\n");
